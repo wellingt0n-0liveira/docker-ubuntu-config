@@ -1,0 +1,16 @@
+# Variáveis de ambiente e Segredos
+.env
+docker/.env
+
+# Pastas de dados dos containers (Bancos, cache, logs)
+app_data/
+db_data/
+npm_data/
+npm_letsencrypt/
+docker/app_data/
+docker/db_data/
+docker/npm_data/
+docker/npm_letsencrypt/
+
+# Arquivos de sistema
+.DS_Store
