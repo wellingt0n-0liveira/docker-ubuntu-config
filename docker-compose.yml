@@ -56,6 +56,15 @@ services:
     networks:
       - homelab_net
 
+  # --- CLOUDFLARE TUNNEL ---
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run --token ${CLOUDFLARE_TUNNEL_TOKEN}
+    networks:
+      - homelab_net
+
 networks:
   homelab_net:
     name: ${NETWORK_NAME}
