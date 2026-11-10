@@ -23,10 +23,10 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/Sao_Paulo
-      - MYSQL_ROOT_PASSWORD=SenhaRootMuitoForte123!
-      - MYSQL_DATABASE=bookstackapp
-      - MYSQL_USER=bookstack_user
-      - MYSQL_PASSWORD=SenhaUserMuitoForte456!
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
     volumes:
       - ./db_data:/config
     networks:
@@ -41,13 +41,13 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/Sao_Paulo
-      - APP_URL=https://bookstack.oniromante.com.br
-      - APP_KEY=base64:8bXhFz7Y9Q2wJ4kL6mN5pR1sT0vW3xY8zA1bC2dE3fG=
+      - APP_URL=${APP_URL}
+      - APP_KEY=${APP_KEY}
       - DB_HOST=bookstack_db
       - DB_PORT=3306
-      - DB_DATABASE=bookstackapp
-      - DB_USERNAME=bookstack_user
-      - DB_PASSWORD=SenhaUserMuitoForte456!
+      - DB_DATABASE=${MYSQL_DATABASE}
+      - DB_USERNAME=${MYSQL_USER}
+      - DB_PASSWORD=${MYSQL_PASSWORD}
       - DRAWIO_SOURCE_URL=https://diagrams.net
     volumes:
       - ./app_data:/config
@@ -58,5 +58,5 @@ services:
 
 networks:
   homelab_net:
-    name: homelab_network
+    name: ${NETWORK_NAME}
     driver: bridge
