@@ -1,30 +1,21 @@
+MIT License
 
----
+Copyright (c) 2026 Wellington Oliveira
 
-### 2. `.env.example` (Coloque na pasta `docker/`)
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-Este arquivo serve de modelo para você e para qualquer pessoa que clonar o repositório. Ele não contém senhas reais.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-```env
-# ==========================================
-# Variáveis do Banco de Dados (MariaDB)
-# ==========================================
-MYSQL_ROOT_PASSWORD=AltereParaUmaSenhaRootForte123!
-MYSQL_DATABASE=bookstackapp
-MYSQL_USER=bookstack_user
-MYSQL_PASSWORD=AltereParaUmaSenhaUserForte456!
-
-# ==========================================
-# Variáveis do BookStack
-# ==========================================
-# A URL deve apontar para o seu domínio final (com HTTPS)
-APP_URL=https://bookstack.seu-dominio.com.br
-
-# Gere a chave usando o comando no README.md
-APP_KEY=base64:SuaChaveGeradaAquiComSinalDeIgualNoFinal=
-
-# ==========================================
-# Configurações de Rede Docker
-# ==========================================
-# Nome da rede que conecta o NPM ao BookStack
-NETWORK_NAME=homelab_network
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
