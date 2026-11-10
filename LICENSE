@@ -1,0 +1,30 @@
+
+---
+
+### 2. `.env.example` (Coloque na pasta `docker/`)
+
+Este arquivo serve de modelo para você e para qualquer pessoa que clonar o repositório. Ele não contém senhas reais.
+
+```env
+# ==========================================
+# Variáveis do Banco de Dados (MariaDB)
+# ==========================================
+MYSQL_ROOT_PASSWORD=AltereParaUmaSenhaRootForte123!
+MYSQL_DATABASE=bookstackapp
+MYSQL_USER=bookstack_user
+MYSQL_PASSWORD=AltereParaUmaSenhaUserForte456!
+
+# ==========================================
+# Variáveis do BookStack
+# ==========================================
+# A URL deve apontar para o seu domínio final (com HTTPS)
+APP_URL=https://bookstack.seu-dominio.com.br
+
+# Gere a chave usando o comando no README.md
+APP_KEY=base64:SuaChaveGeradaAquiComSinalDeIgualNoFinal=
+
+# ==========================================
+# Configurações de Rede Docker
+# ==========================================
+# Nome da rede que conecta o NPM ao BookStack
+NETWORK_NAME=homelab_network
